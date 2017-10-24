@@ -7,7 +7,7 @@ var app = express();
 var config = require('./config');
 var db = config.DB[process.env.NODE_ENV] || process.env.DB;
 var router = require('./routes/index');
-mongoose.Promise = Promise;
+mongoose.Promise = global.Promise;
 
 mongoose.connect(db, {useMongoClient: true})
     .then(() => console.log('successfully connected to', db))
