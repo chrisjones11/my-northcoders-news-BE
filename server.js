@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var config = require('./config');
 var db = config.DB[process.env.NODE_ENV] || process.env.DB;
+var router = require('./routes/index');
 mongoose.Promise = Promise;
 
 mongoose.connect(db, {useMongoClient: true})
@@ -13,5 +14,7 @@ mongoose.connect(db, {useMongoClient: true})
     .catch(err => console.log('connection failed', err));
 
 app.use(bodyParser.json());
+
+app.use('/api', router);
 
 module.exports = app;
