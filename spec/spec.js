@@ -5,8 +5,6 @@ const expect  = require('chai').expect;
 const request = require('supertest');
 const saveTestData = require('../seed/test.seed');
 const app = require('../server/server.js');
-// const { Users, Articles, Comments, Topics } = require('../server/models/models');
-// const router = require('../server/routes');
 
 describe('api', () => {
     let usefulData;
@@ -26,7 +24,7 @@ describe('api', () => {
                 .get('/api/articles')
                 .expect(200)
                 .then(res => {
-                    console.log(res);
+                    // console.log(res);
                     expect(res.body.articles.length).to.equal(2);
                 });
         });
@@ -75,7 +73,7 @@ describe('api', () => {
         describe('PUT /articles/:article_id', () => {
             it('increments votes on articles by 1', () => {
                 return request(app)
-                    .put(`/api/articles/${usefulData.articles[0]._id}?vote=UP`)
+                    .put(`/api/articles/${usefulData.articles[0]._id}?vote=up`)
                     .then(res => {
                         expect(res.body.belongs_to).to.equal('cats');
                         expect(res.body.votes).to.equal(1);
@@ -85,7 +83,7 @@ describe('api', () => {
         describe('PUT /comments/:comment_id', () => {
             it('increments votes on comments by 1', () => {
                 return request(app)
-                    .put(`/api/comments/${usefulData.comments[0]._id}?vote=UP`)
+                    .put(`/api/comments/${usefulData.comments[0]._id}?vote=up`)
                     .then(res => {
                         expect(res.body.created_by).to.equal('northcoder');
                         expect(res.body.votes).to.equal(1);
