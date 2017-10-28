@@ -2,12 +2,11 @@ const router = require('express').Router();
 const {fetchAllTopics, fetchTopicsById, fetchAllArticles, fetchCommentsFromArticle, addCommentToArticle, changeArticleVoteByOne, changeCommentVoteByOne, deleteComment, fetchUser} = require('../controllers/index');
 
 
+router.get ('/articles', fetchAllArticles);
 
 router.get ('/topics', fetchAllTopics);
 
 router.get ('/topics/:topic/articles', fetchTopicsById);
-
-router.get ('/articles', fetchAllArticles);
 
 router.get ('/articles/:article_id/comments', fetchCommentsFromArticle);
 
