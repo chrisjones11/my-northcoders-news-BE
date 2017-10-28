@@ -75,14 +75,14 @@ function addCommentToArticle (req, res, next) {
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 function changeArticleVoteByOne (req, res, next) {
-    // let inc = 0;
-    // console.log(req.params.article_id);
-    // if (req.query.vote === 'UP') inc = 1;
-    // else if (req.query.vote === 'DOWN') inc = -1;
-    // Articles.findByIdAndUpdate(req.params.article_id, { $inc: { votes: inc } },
-    //     { new: true })
-    //     .then(article => res.send(article))
-    //     .catch(err => next(err));
+    let inc = 0;
+    console.log(req.params.article_id);
+    if (req.query.vote === 'up') inc = 1;
+    else if (req.query.vote === 'down') inc = -1;
+    Articles.findByIdAndUpdate(req.params.article_id, { $inc: { votes: inc } },
+        { new: true })
+        .then(article => res.send(article))
+        .catch(err => next(err));
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
