@@ -15,6 +15,10 @@ mongoose.connect(db, {useMongoClient: true})
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('hello im NC news Server');
+});
+
 app.use('/api', router);
 
 module.exports = app;
