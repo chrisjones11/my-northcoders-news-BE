@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>NorthcodersNewsAPI</title>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <H1>Northcoders News Api</H1>
+
+    <h2>API Endpoints are below marked in red</h2>
    
-    
-<h3>  GET /api/topics </h3>
+<h3>  GET <code>/api/topics </code></h3>
 <p> Get all the topics  </p>
 
-<h3> GET /api/topics/:topic/articles </h3>
+<h3> GET <code>/api/topics/:topic/articles</code> </h3>
 <p> Return all the articles for a certain topic  </p>
 
-<h3> GET /api/articles </h3>
+<h3> GET <code>/api/articles </code></h3>
 <p> Returns all the articles  </p>
 
-<h3> GET /api/articles/:article_id/comments </h3>
+<h3> GET <code>/api/articles/:article_id/comments</code> </h3>
 <p>  Get all the comments for a individual article </p>
 
-<h3> POST /api/articles/:article_id/comments </h3>
+<h3> POST <code>/api/articles/:article_id/comments</code> </h3>
 <p>  Add a new comment to an article. This route requires a JSON body with a comment key and value pair </p>
 
-<h3> PUT /api/articles/:article_id </h3>
+<h3> PUT <code>/api/articles/:article_id </code></h3>
 <p>  Increment or Decrement the votes of an article by one. This route requires a vote query of 'up' or 'down' </p>
 
-<h3> PUT /api/comments/:comment_id </h3>
+<h3> PUT <code>/api/comments/:comment_id</code> </h3>
 <p>  Increment or Decrement the votes of a comment by one. This route requires a vote query of 'up' or 'down' </p>
 
-<h3> DELETE /api/comments/:comment_id </h3>
+<h3> DELETE <code>/api/comments/:comment_id </code></h3>
 <p>  Deletes a comment if the comment was created by the Northcoder user </p>
 
-<h3> GET /api/users/:username </h3>
+<h3> GET <code>/api/users/:username </code></h3>
 <p>  Returns a JSON object with the profile data for the specified user. </p>
 
-<h3> GET /api/users/:username/repos </h3>
+<h3> GET <code>/api/users/:username/repos</code> </h3>
 <p>  Returns a JSON array with all the public repos of the specified user. </p>
 
 
