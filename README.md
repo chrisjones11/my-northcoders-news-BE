@@ -14,7 +14,7 @@ This project requires nodejs, npm, git and mongoDB to be installed
 
 
 ##### Node    
-To confirm you have version 7 or aboveof nodejs installed on your machine,  Open your terminal then type and run the following code:
+To confirm you have version 7 or above of nodejs installed on your machine,  Open your terminal then type and run the following code:
 
 ```
 $ node -v
@@ -41,7 +41,7 @@ $ git --version
 
 If you don't have git installed on your machine, instructions for installing git can be found at [https://git-scm.com/].
 
-####mongoDB
+#### MongoDB
 
 To confirm you have mongodb installed on your machine, Open your terminal then type and run the following code:
 
@@ -102,8 +102,11 @@ listening on port 5000
 successfully connected to database
 ```
 
-In the browser navigate to [http://localhost:5000/] and follow the instructions available there. All of the routes are listed and described at [http://localhost:5000/] 
+In the browser navigate to http://localhost:5000/ and follow the instructions available there. All of the routes are listed and described at home page
 
+### Deployed Version
+
+A deployed version of this project using heroku and mlabs can be found at [https://ncnewsbe.herokuapp.com/]
 ___
 
 ### Running the tests
